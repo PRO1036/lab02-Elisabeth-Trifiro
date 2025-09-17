@@ -1,4 +1,4 @@
----
+gggg---
 title: "Lab 02 - Plastic waste"
 author: "Votre nom"
 date: "La date"
@@ -28,7 +28,12 @@ plastic_waste <- plastic_waste %>%
 ### Exercise 1
 
 ```{r plastic-waste-continent}
-# insert code here
+plastic_waste <- plastic_waste %>%
+  filter(plastic_waste_per_cap <3.5)
+ggplot(plastic_waste,aes(x=plastic_waste_per_cap))+
+  geom_histogram(binwidth=0.21)+
+  facet_wrap(~continent,ncol=3)
+
 ```
 
 ### Exercise 2
