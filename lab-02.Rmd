@@ -35,14 +35,15 @@ ggplot(plastic_waste,aes(x=plastic_waste_per_cap))+
   facet_wrap(~continent,ncol=3)
 
 ```
+Réponse à la question
 
 ### Exercise 2
 
 ```{r plastic-waste-density}
 plastic_waste <- plastic_waste %>%
   filter(plastic_waste_per_cap<3.5)
-ggplot(plastic_waste,aes(x=plastic_waste_per_cap))+
-  geom_density()
+ggplot(plastic_waste,aes(x=plastic_waste_per_cap,fill=continent,color=continent))+
+  geom_density(alpha=0.5)
 
 ```
 
