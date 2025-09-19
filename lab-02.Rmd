@@ -89,14 +89,22 @@ Si on considère tous les continents, on peut voir qu'il n'y a aucun pays qui se
 
 
 ```{r plastic-waste-population-total}
-# insert code here
+plastic_waste <- plastic_waste %>%
+  filter(plastic_waste_per_cap <3.5)
+ggplot(plastic_waste,aes(x=plastic_waste_per_cap, y=total_pop))+
+  geom_point()
+
 ```
 
 ```{r plastic-waste-population-coastal}
-# insert code here
+plastic_waste <-plastic_waste %>%
+  filter(plastic_waste_per_cap <3.5)
+ggplot(plastic_waste, aes(x=plastic_waste_per_cap, y=coastal_pop))+
+  geom_point()
+
 ```
 
-Réponse à la question...
+Lorsqu'on regarde les deux graphiques, on peut voir que les pays aux populations costales ont moins de déchets par habitants que les pays aux habitants moins costaux.Malgré cette conclusion, il n'y a aucun des deux graphiques qui démontre une relations plus forte entre les deux variables.
 
 ## Conclusion
 
