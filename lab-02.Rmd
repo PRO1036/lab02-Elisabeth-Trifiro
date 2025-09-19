@@ -47,7 +47,7 @@ ggplot(plastic_waste,aes(x=plastic_waste_per_cap,fill=continent,color=continent)
 
 ```
 
-Réponse à la question...
+Le réglage de la couleur (color et fill) se trouve dans la parenthèse du aes (aesthetics) puisque ces paramètres sont associés avec des variables du jeu de données. En effet, chaque couleur est associée avec un continent et si on en retire un, les couleurs vont changer. Au contraire, le réglage de la transparence (alpha) ne se situe par dans l'aesthetics puisque la transparence ne change pas avec une variable. Si on retire un continent de la liste, il n'y a aucun effet sur la transparence. 
 
 ### Exercise 3
 
