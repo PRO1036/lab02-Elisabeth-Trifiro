@@ -35,7 +35,7 @@ ggplot(plastic_waste,aes(x=plastic_waste_per_cap))+
   facet_wrap(~continent,ncol=3)
 
 ```
-Réponse à la question
+Il est possible d'observer que pour tous les continents excepté l'Afrique ont plus de pays ayant environ 0.2 de gaspillage plastique par habitant que de pays qui en ont presque 0. Cela signifie en bref qu'il y a beaucoup moins de gaspillage par personne en Afrique que dans tous les autres continents.
 
 ### Exercise 2
 
