@@ -54,16 +54,23 @@ Le réglage de la couleur (color et fill) se trouve dans la parenthèse du aes (
 Boxplot:
 
 ```{r plastic-waste-boxplot}
-# insert code here
+plastic_waste <- plastic_waste %>% 
+  filter(plastic_waste_per_cap<3.5)
+ggplot(plastic_waste,aes(x=continent, y=plastic_waste_per_cap))+
+  geom_boxplot()
+
 ```
 
 Violin plot:
 
 ```{r plastic-waste-violin}
-# insert code here
+plastic_waste <- plastic_waste %>%
+  filter(plastic_waste_per_cap<3.5)
+ggplot(plastic_waste,aes(x=continent, y=plastic_waste_per_cap))+
+  geom_violin()
 ```
 
-Réponse à la question...
+Les violons, au contraire des boites, permettent de voir la distribution à l'intérieur du 50% des données qui se situent dans la section blanche.
 
 ### Exercise 4
 
