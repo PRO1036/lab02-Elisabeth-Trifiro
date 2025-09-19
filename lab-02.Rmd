@@ -76,10 +76,14 @@ Les violons, au contraire des boites, permettent de voir la distribution à l'in
 
 
 ```{r plastic-waste-mismanaged}
-# insert code here
+plastic_waste <- plastic_waste %>%
+  filter(plastic_waste_per_cap<3.5)
+ggplot(plastic_waste,aes(x=plastic_waste_per_cap, y=mismanaged_plastic_waste_per_cap, color=continent))+
+  geom_point()
+
 ```
 
-Réponse à la question...
+Si on considère tous les continents, on peut voir qu'il n'y a aucun pays qui se débarasse de tous les déchets qu'il crée. En observant chaques continents spécifiques, il est possible de voir que les continents comme l'Afrique et l'Océanie se débarassent plus des déchets qu'ils créent que d'autres continent comme l'Europe et l'Amérique du Nord. L'Asie est un continent est un peu spécial puisque la distribution des pays est très vairée. Il y a autant de pays avec peu de déchets ou qui se débarassent de la plupart de ce qu'ils créent que de pays qui ont une grande production de déchets et se débarassent de presque aucun déchets.
 
 ### Exercise 5
 
