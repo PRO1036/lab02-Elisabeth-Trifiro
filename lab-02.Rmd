@@ -1,7 +1,7 @@
 gggg---
 title: "Lab 02 - Plastic waste"
-author: "Votre nom"
-date: "La date"
+author: "Élisabeth Trifiro"
+date: "22 septembre 2025"
 output: github_document
 ---
 
@@ -111,5 +111,10 @@ Lorsqu'on regarde les deux graphiques, on peut voir que les pays aux populations
 Recréez la visualisation:
 
 ```{r recreate-viz}
-# insert code here
+plastic_waste <-plastic_waste %>%
+  mutate(coastal_pop_prop=coastal_pop/total_pop) %>%
+  filter(plastic_waste_per_cap<3)
+ggplot(plastic_waste,aes(x=coastal_pop_prop,y=plastic_waste_per_cap,color=continent)+
+  geom_point()
+  
 ```
