@@ -29,7 +29,7 @@ plastic_waste <- plastic_waste %>%
 plastic_waste <- plastic_waste %>%
   filter(plastic_waste_per_cap <3.5)
 ggplot(plastic_waste,aes(x=plastic_waste_per_cap))+
-  geom_histogram(binwidth=0.21)+
+  geom_histogram(binwidth=0.2)+
   facet_wrap(~continent,ncol=3)+
   labs(title="Quantité de déchets par habitants par pays séparé selon leur continent", x="Quantité de déchets par habitants (kg/jour)", y="Nombre de pays")
 ```
